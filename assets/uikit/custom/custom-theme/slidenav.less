@@ -1,0 +1,162 @@
+//
+// Component: Slidenav
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@slidenav-padding-vertical:                     5px;
+@slidenav-padding-horizontal:                   10px;
+
+@slidenav-color:                                @global-color;
+@slidenav-hover-color:                          fade(@global-color, 90%);
+@slidenav-active-color:                         fade(@global-color, 50%);
+
+@slidenav-large-padding-vertical:               10px;
+@slidenav-large-padding-horizontal:             @slidenav-large-padding-vertical;
+
+
+// Component
+// ========================================================================
+
+.hook-slidenav() { transition: color 0.1s ease-in-out; }
+
+.hook-slidenav-hover() {}
+
+.hook-slidenav-active() {}
+
+
+// Icon modifier
+// ========================================================================
+
+.hook-slidenav-previous() {}
+
+.hook-slidenav-next() {}
+
+
+// Size modifier
+// ========================================================================
+
+.hook-slidenav-large() {}
+
+
+// Container
+// ========================================================================
+
+.hook-slidenav-container() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-icon-misc() {
+    .tm-slide-arrows {
+        top: 30% !important;
+        svg{
+            width: 14px;
+            height: 14px;
+            color: @global-color;
+            polyline{
+                stroke-width: 3;
+            }
+        }
+    }
+    .tm-slide-arrows-news{
+        top: 35% !important;
+        svg{
+            width: 14px;
+            height: 14px;
+            color: @global-color;
+            polyline{
+                stroke-width: 3;
+            }
+        }
+    }
+
+    .tm-slide-arrows-home{
+        top: 44% !important;
+        svg{
+            width: 14px;
+            height: 14px;
+            color: @global-color;
+            polyline{
+                stroke-width: 3;
+            }
+        }
+    }
+
+    .tm-slide-arrow-spa{
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid @global-inverse-color;
+        padding: 11px 13px 10px 12px !important;
+        svg{
+           color: @global-inverse-color;
+           width: 5px;
+           height: 9px;
+        }
+    }
+    .tm-slide-arrow-spa-right{
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid @global-inverse-color;
+        padding: 11px 12px 10px 13px!important;
+        svg{
+           color: @global-inverse-color;
+           width: 5px;
+           height: 9px;
+        }
+    }
+
+    .tm-food-arrow {
+        background-color: @global-color;
+        border-radius: 50%;
+        width:32px;
+        height: 32px;
+        svg {
+            margin: 11px 10px 9px 9px;
+            height: 9px;
+            polyline {
+                stroke: @global-background;
+                stroke-width: 5;
+            }
+        }
+    }
+
+    .tm-home-slideshow {
+        border:1px solid transparent;
+        color: @global-color;
+        border-radius: 50%;
+        svg {
+            display: none;
+        }
+        span {
+            svg {
+                display: block;
+                margin: 10px 9px;
+                path {
+                    fill: @global-background !important;
+                }
+            }
+        }
+        &:hover{
+            border:1px solid @global-background;
+            transition: .5s;
+        }
+    }
+}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-slidenav-color:                       fade(@inverse-global-color, 70%);
+@inverse-slidenav-hover-color:                 fade(@inverse-global-color, 95%);
+@inverse-slidenav-active-color:                fade(@inverse-global-color, 70%);
+
+.hook-inverse-slidenav() {
+}
+.hook-inverse-slidenav-hover() {}
+.hook-inverse-slidenav-active() {}

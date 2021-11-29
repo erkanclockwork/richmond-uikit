@@ -1,0 +1,53 @@
+//
+// Component: Animation
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@animation-duration:                            0.5s;
+@animation-fade-duration:                       0.8s;
+@animation-kenburns-duration:                   15s;
+@animation-fast-duration:                       0.1s;
+
+@animation-slide-small-translate:               10px;
+@animation-slide-medium-translate:              50px;
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-animation-misc() {
+
+    @keyframes black-to-color {
+        from {filter: grayscale(100%);}
+        to {filter: grayscale(0%);}
+    }
+
+    .tm-colorize{
+        animation: black-to-color;
+        animation-duration: calc(4 * @animation-duration);
+        animation-timing-function: ease-in-out;
+        -moz-animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
+    }
+
+    @keyframes shadow {
+        100% { box-shadow: -10px 10px 0 0 @global-color;}
+    }
+
+    .tm-shadowize {
+        animation: shadow;
+        animation-duration: calc(2 * @animation-duration);
+        animation-delay: 2s;
+        -moz-animation-delay: 2s;
+        -webkit-animation-delay: 2s;
+        animation-timing-function: ease-in-out;
+        -moz-animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+}

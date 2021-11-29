@@ -1,0 +1,63 @@
+//
+// Component: Badge
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@badge-size:                                    22px;
+@badge-padding-vertical:                        2px;
+@badge-padding-horizontal:                      17px;
+@badge-border-radius:                           500px;
+@badge-background:                              @global-secondary-background;
+@badge-color:                                   @global-inverse-color;
+@badge-font-size:                               @global-badge-font-size;
+
+@badge-hover-color:                             @global-inverse-color;
+
+
+// Component
+// ========================================================================
+
+.hook-badge() {
+}
+
+.hook-badge-hover() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-badge-misc() {
+    .tm-accomodation-card-badge {
+        border: @global-border-width solid @tm-badge-border;
+        padding: @global-small-margin calc(2 * @global-small-margin);
+        border-radius: 3px;
+        font-size: @global-paragraph-mobile-size;
+        font-weight: bold;
+        min-width: 45px;
+        text-align: center;
+    }
+
+    .tm-blog-badge {
+        position: absolute;
+        margin-top: @global-small-margin;
+        margin-left: @global-small-margin;
+        border-radius: 0;
+        padding: 0 10px;
+        font-size: @global-paragraph-mobile-size;
+    }
+}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-badge-background:                     @inverse-global-primary-background;
+@inverse-badge-color:                          @inverse-global-inverse-color;
+@inverse-badge-hover-color:                    @inverse-global-inverse-color;
+
+.hook-inverse-badge() {}
+.hook-inverse-badge-hover() {}

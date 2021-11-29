@@ -1,0 +1,58 @@
+//
+// Component: Background
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@background-default-background:                 @global-background;
+@background-muted-background:                   @global-muted-background;
+@background-primary-background:                 @global-primary-background;
+@background-secondary-background:               @global-secondary-background;
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-background-misc() {
+    .tm-background-accomodation-dark{
+        background: url(../../../images/leaf.svg) no-repeat;
+        background-color: @global-secondary-background;
+        background-position: 0% 100%;
+        @media (max-width: @breakpoint-xsmall-max){
+            background: @global-secondary-background;
+        }
+    }
+    .tm-background-accomodation-light{
+        background: url(../../../images/leaf.svg) no-repeat;
+        background-color: @global-background;
+        background-position: 0% 100%;
+    }
+    .tm-background-menu{
+        background: @global-secondary-background url(../../../images/leaf.svg) no-repeat;
+        background-position: 90% 100%;
+        @media (max-width: @breakpoint-xsmall-max){
+            background-position: -60% 60%;
+        }
+    }
+
+    .tm-award-background{
+        background-color: @global-awards-background;
+        height: 370px;
+    }
+
+    .tm-background-mobile-reservation {
+        background: @global-secondary-background url(../../../images/common/mobile-reservation-375.png);
+        background-size: cover;
+        background-position: 50%;
+    }
+
+    .tm-background-gallery-slide {
+        background-color: rgba(0,0,0,.8);
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+}

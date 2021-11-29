@@ -1,0 +1,140 @@
+//
+// Component: List
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@list-margin-top:                               (@global-small-margin / 2);
+
+@list-nested-padding-left:                      @global-gutter;
+
+@list-divider-margin-top:                       @global-small-margin;
+@list-divider-border-width:                     @global-border-width;
+@list-divider-border:                           @global-border;
+
+@list-striped-padding-vertical:                 @global-small-margin;
+@list-striped-padding-horizontal:               @global-small-margin;
+@list-striped-background:                       @global-muted-background;
+
+@list-bullet-width:                             4px;
+@list-bullet-height:                            @list-bullet-width;
+@list-bullet-margin-right:                      @global-small-margin;
+@list-bullet-icon-color:                        @global-list-bullet-color;
+
+@list-large-margin-top:                         @global-margin;
+@list-large-divider-margin-top:                 @global-margin;
+@list-large-striped-padding-vertical:           @global-margin;
+@list-large-striped-padding-horizontal:         @global-small-margin;
+
+@internal-list-bullet-image:                    "../../images/backgrounds/list-bullet.svg";
+
+//
+// New
+//
+
+@list-striped-border-width:                     @global-border-width;
+@list-striped-border:                           @global-border;
+
+
+// Style modifiers
+// ========================================================================
+
+.hook-list-divider() {}
+
+.hook-list-striped() {
+
+    &:nth-of-type(odd) {
+        border-top: @list-striped-border-width solid @list-striped-border;
+        border-bottom: @list-striped-border-width solid @list-striped-border;
+    }
+
+}
+
+.hook-list-bullet() {
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-list-misc() {
+    .uk-list-bullet {
+        li {
+            padding-left: 14px;
+            &::before{
+                border-radius: 50%;
+                top: 10px;
+            }
+        }
+    }
+
+    .tm-sublist{
+        margin-top: 26px;
+        margin-bottom: 22px;
+        li{
+            padding-left: 14px;
+            a{
+                font-size: 14px;
+            }
+        }
+    }
+    .tm-gift-list {
+        li {
+            margin-bottom: 32px;
+            @media (max-width: @breakpoint-xsmall-max) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .wellness-list{
+        li{
+            padding-left: 21px;
+            &::before{
+                // content: '';
+                // display: inline-block;
+                background-image: url(../../custom/icons/icn-greencheck.svg);
+                // background-position: center;
+                // vertical-align: middle;
+                height: 11px;
+                width: 16px;
+                background-size: 13px;
+                // background-repeat: no-repeat;
+                // margin-right: 10px;
+            }
+        }
+    }
+
+    .detox-list{
+        li{
+            &::before{
+                background-image: url(../../custom/icons/icn-listline.svg);
+                height: 5px;
+                width: 10px;
+            }
+        }
+    }
+
+}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-list-divider-border:                     @inverse-global-border;
+@inverse-list-striped-background:                 @inverse-global-muted-background;
+@inverse-list-bullet-icon-color:                  @inverse-global-color;
+
+.hook-inverse-list-divider() {}
+.hook-inverse-list-striped() {
+
+    &:nth-of-type(odd) {
+        border-top-color: @inverse-global-border;
+        border-bottom-color: @inverse-global-border;
+    }
+
+}
+.hook-inverse-list-bullet() {}

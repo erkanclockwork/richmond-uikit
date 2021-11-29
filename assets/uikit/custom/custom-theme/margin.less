@@ -1,0 +1,72 @@
+//
+// Component: Margin
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@margin-margin:                                        @global-margin;
+
+@margin-small-margin:                                  @global-small-margin;
+
+@margin-medium-margin:                                 @global-medium-margin;
+
+@margin-large-margin:                                  @global-medium-margin;
+@margin-large-margin-l:                                @global-large-margin;
+
+@margin-xlarge-margin:                                 @global-large-margin;
+@margin-xlarge-margin-l:                               @global-xlarge-margin;
+@margin-text-margin:                                   @global-text-margin;
+@margin-heading-margin:                                @global-heading-margin;
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-margin-misc() {
+    .tm-text-margin-bottom {
+        margin-bottom: @global-text-margin !important;
+    }
+    .tm-bottom-out-heading-margin{
+        margin-top: @global-heading-margin !important;
+    }
+
+    .tm-sm-icon-margin {
+        margin-bottom: calc(@global-medium-margin + @global-small-margin);
+    }
+
+    .tm-share-icon-margin {
+        margin-right: calc(@global-small-margin / 2);
+    }
+
+    .tm-blog-detail-banner-margin {
+        margin-top: @global-medium-gutter;
+    }
+
+    .tm-close-btn-menu-mobile-margin {
+        margin-left: calc(@global-small-margin * 2);
+    }
+
+    .tm-wellness-hours-header-margin{
+        margin-bottom: 38px;
+        @media (max-width: @breakpoint-xsmall-max) {
+            margin-bottom: 18px;
+        }
+    }
+
+    .tm-spa-chevron-margin {
+        margin-left: 10px;
+        @media (max-width: @breakpoint-xsmall-max) {
+            margin-left: 5px;
+        }
+    }
+
+    .tm-spa-membership-text-margin {
+        margin-bottom: calc(@global-margin + @global-medium-margin);
+        @media (max-dith: @breakpoint-xsmall-max) {
+            margin-bottom: @global-medium-margin;
+        } 
+    }
+}

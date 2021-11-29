@@ -1,0 +1,232 @@
+//
+// Component: Padding
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@padding-padding:                                       @global-gutter;
+@padding-padding-l:                                     @global-medium-gutter;
+
+@padding-small-padding:                                 @global-small-gutter;
+
+@padding-large-padding:                                 @global-gutter;
+@padding-large-padding-l:                               @global-large-gutter;
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-padding-misc() {
+    .tm-padding-medium-top {
+        padding-top: calc(@global-small-space * 3);
+    }
+
+    .tm-padding-large-top-bottom{
+        padding-top: calc(5 * @global-gutter);
+        padding-bottom: calc(5 * @global-gutter);
+    }
+    .tm-padding-large-top{
+        padding-top: calc(5 * @global-gutter);
+    }
+    .tm-padding-large-bottom{
+        padding-bottom: calc(5 * @global-gutter);
+    }
+
+    .tm-padding-xlarge {
+        padding: calc(5 * @global-gutter);
+    }
+
+    .tm-footer-padding {
+        @media (min-width: @breakpoint-small) {
+            padding: @global-large-gutter;
+        }
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding: @global-small-gutter;
+        }
+    }
+
+    .tm-blog-detail-padding {
+        padding-top: 50px;
+        h2, h3, h4, h5, h6 {
+            font-weight: 600 !important;
+            font-size: 16px !important;
+        }
+        @media (max-width: 639px) {
+            padding-top: @global-gutter;
+        }
+    }
+
+    .tm-blog-slide-padding {
+        padding-top: calc(@global-gutter * 5);
+        padding-bottom: calc(@global-gutter * 5);
+        @media(max-width: @breakpoint-xsmall-max){
+            padding-top: @global-gutter;
+            padding-bottom: @global-medium-gutter;
+        }
+    }
+
+    .tm-padding-medium {
+        padding-top: calc(@global-small-margin * 4);
+        padding-bottom: calc(@global-small-margin * 4);
+    }
+
+    .tm-menu-modal-padding {
+        padding-top: calc(@global-small-margin * 4);
+        padding-left: calc(@global-small-margin * 8);
+        padding-right: calc(@global-small-margin * 8);
+        padding-bottom: calc(@global-gutter * 4);
+        @media(max-width: @breakpoint-large-max){
+            padding-bottom: calc(@global-gutter * 2); 
+        }
+    }
+
+    .tm-menu-modal-head-padding{
+        padding: calc(@global-small-margin * 2);
+    }
+
+    .tm-meeting-head-padding {
+        padding-top: calc(@global-gutter * 5);
+        padding-bottom: calc(@global-small-gutter * 5);
+        @media (max-width: @breakpoint-xsmall-max){
+            padding-top: @global-gutter;
+            padding-bottom: @global-medium-gutter;
+        }
+    }
+
+    .tm-meeting-table-padding {
+        padding-top: calc(@global-small-gutter * 5);
+        padding-bottom: calc(@global-gutter * 5);
+        @media (max-width: @breakpoint-xsmall-max){
+            padding-top: @global-medium-gutter;
+            padding-bottom: calc(@global-small-margin * 7);
+        }
+    }
+
+    .tm-meeting-equipment-padding {
+        padding-top: 55px;
+        padding-bottom: 95px;
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: calc(@global-small-margin * 5);
+            padding-bottom: calc(@global-small-margin * 5);
+        }
+    }
+
+    .tm-meetwell-padding {
+        padding-top: calc(@global-small-gutter * 5);
+        padding-bottom: calc(@global-small-gutter * 5);
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: @global-medium-gutter;
+            padding-bottom: @global-medium-gutter;
+        }
+    }
+
+    .tm-rooms-padding {
+        padding-top: calc(@global-gutter * 5);
+        padding-bottom: calc(@global-gutter * 5);
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: @global-gutter;
+            padding-bottom: @global-medium-gutter;
+        }
+    }
+
+    .tm-opportunity-padding {
+        padding-top: @global-medium-gutter;
+        padding-bottom: @global-medium-gutter;
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: @global-gutter;
+            padding-bottom: @global-gutter;
+        }
+    }
+
+    .tm-wellness-hours-padding {
+        padding-top: calc(@global-gutter + @global-medium-gutter);
+        padding-bottom: calc(@global-gutter + @global-medium-gutter);
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: @global-gutter;
+            padding-bottom: @global-gutter;
+        }
+    }
+
+    .tm-reservation-padding-top {
+        padding-top: 200px;
+
+        @media (min-width: @breakpoint-medium) {
+            padding-top: 300px;
+        }
+    }
+
+    .tm-padding-awards-section{
+        padding-bottom: 50px;
+    }
+    
+    .tm-padding-career-link-section{
+        padding: 100px 0;
+        @media(max-width: @breakpoint-xsmall-max){
+            padding: @global-medium-gutter 0;
+        }
+    }
+
+    .tm-padding-gift-filter-content-padding {
+        padding-bottom: calc(5 * @global-gutter);
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-bottom: calc(2 * @global-gutter);
+        }
+    }
+
+    .tm-padding-corporate-gift-contact-padding {
+        padding-top: 115px;
+        padding-bottom: 115px;
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: 65px;
+            padding-bottom: 65px;
+        }
+    }
+
+    .tm-corporate-oppurtunity-padding {
+        padding-top: @global-medium-gutter;
+        padding-bottom: @global-large-gutter;
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: @global-gutter;
+            padding-bottom: @global-medium-gutter;
+        }
+    }
+
+    .tm-gift-section-headers-padding {
+        padding-top: @global-large-gutter;
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: @global-gutter;
+        }
+    }
+
+    .tm-padding-otel-services-padding {
+        padding-top: @global-large-gutter;
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: @global-medium-gutter;
+        }
+    }
+    .tm-otel-services-item-wrapper-padding {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: @global-medium-gutter;
+            padding-bottom: @global-medium-gutter;
+        }
+    }
+
+    .tm-recommend-card-wrapper {
+        padding-top: 80px;
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-top: @global-gutter;
+        }
+    }
+
+    .tm-girls-spa{
+        padding: 40px;
+        @media(max-width: @breakpoint-xsmall-max) {
+            padding: @global-small-gutter;
+        }
+    }
+}

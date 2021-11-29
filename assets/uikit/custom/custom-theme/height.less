@@ -1,0 +1,42 @@
+//
+// Component: Height
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@height-small-height:                           150px;
+@height-medium-height:                          300px;
+@height-large-height:                           450px;
+@height-xlarge-height:                          600px;
+@height-xxlarge-height:                         700px;
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-height-misc() {
+    .uk-height-xlarge {
+        height: @height-xlarge-height;
+    }
+    .uk-height-xxlarge {
+        height: 240px;
+    }
+
+    .tm-height-reservation {
+        height: @height-xxlarge-height;
+    }
+
+
+    @media(min-width: @breakpoint-medium) {
+        .uk-height-xxlarge {
+            height: @height-xxlarge-height;
+        }
+
+        .tm-height-reservation {
+            height: calc(@height-xxlarge-height + @height-medium-height);
+        }
+    }
+}
