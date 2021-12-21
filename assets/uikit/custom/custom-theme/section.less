@@ -1112,12 +1112,19 @@ position: relative !important;
       transition-duration: .2s;
   }
   /* Slider active color */
-  input:checked + .uk-switch-slider {
+  input:checked + .uk-switch-green {
     background-color: @global-success-background !important;
+  }
+  input:checked + .uk-switch-dark {
+    background-color: @global-secondary-background !important;
   }
   /* Pointer active animation */
   input:checked + .uk-switch-slider:before {
     transform: translateX(14px);
+  }
+
+  .uk-checkbox-dark:checked{
+      background-color: @global-secondary-background;
   }
   
   #subscriptionForm{
